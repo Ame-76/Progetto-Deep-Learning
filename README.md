@@ -14,16 +14,25 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-### ☁️ Google Colab
-Per training su GPU gratuita, apri i notebook su [Google Colab](https://colab.research.google.com/) e aggiungi questa cella all'inizio:
+### ☁️ Google Colab (Semplificato)
+Per training su GPU gratuita senza complicazioni:
 
 ```python
-# Setup automatico Google Colab
-!wget -q https://raw.githubusercontent.com/Ame-76/Progetto-Deep-Learning/master/setup_colab.py
-exec(open('setup_colab.py').read())
+# Setup ultra-rapido su Colab (SENZA Google Drive)
+import os, sys
+
+if not os.path.exists('/content/Progetto-Deep-Learning'):
+    !git clone https://github.com/Ame-76/Progetto-Deep-Learning.git /content/Progetto-Deep-Learning
+
+os.chdir('/content/Progetto-Deep-Learning')
+sys.path.append('/content/Progetto-Deep-Learning/src')
+!pip install -q tensorflow-datasets seaborn plotly opencv-python
+
+print("✅ Pronto per il training!")
 ```
 
-📖 **Guida completa**: Consulta [COLAB_GUIDE.md](COLAB_GUIDE.md) per istruzioni dettagliate.
+🎯 **Al termine del training**: download automatico del modello (ZIP)  
+📖 **Guida completa**: [COLAB_GUIDE.md](COLAB_GUIDE.md)
 
 ### 3. Setup GPU (Opzionale ma Raccomandato)
 Per accelerazione GPU, segui la guida completa: [CUDA_SETUP.md](CUDA_SETUP.md)

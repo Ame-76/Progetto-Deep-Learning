@@ -1,44 +1,53 @@
-# Guida per Google Colab
+# Guida Google Colab - Versione Semplificata
 
-Questa guida ti spiega come eseguire i notebook del progetto su Google Colab e sincronizzare automaticamente i modelli addestrati con il progetto locale.
+Questa guida ti mostra come usare Google Colab per addestrare modelli e scaricarli direttamente senza complicazioni.
 
-## 🚀 Setup Rapido
+## 🎯 **Soluzione Semplificata (RACCOMANDATO)**
 
-### Opzione 1: Setup Automatico (Raccomandato)
-Aggiungi questa cella all'inizio di ogni notebook su Colab:
+**NIENTE GOOGLE DRIVE!** Download diretto dei modelli addestrati.
 
-```python
-# Setup automatico per Google Colab
-!wget -q https://raw.githubusercontent.com/Ame-76/Progetto-Deep-Learning/master/setup_colab.py
-exec(open('setup_colab.py').read())
-```
+### ⚡ Setup Ultra-Rapido
 
-### Opzione 2: Setup Manuale
-Esegui queste celle all'inizio del notebook:
+Aggiungi questa cella all'inizio del notebook su Colab:
 
 ```python
-# 1. Monta Google Drive
-from google.colab import drive
-drive.mount('/content/drive')
+# Setup Colab semplificato - SENZA Google Drive
+import os, sys
 
-# 2. Clona il progetto (solo la prima volta)
-import os
-PROJECT_PATH = '/content/drive/MyDrive/Progetto-Deep-Learning'
+# Clona progetto
+if not os.path.exists('/content/Progetto-Deep-Learning'):
+    !git clone https://github.com/Ame-76/Progetto-Deep-Learning.git /content/Progetto-Deep-Learning
 
-if not os.path.exists(PROJECT_PATH):
-    !git clone https://github.com/Ame-76/Progetto-Deep-Learning.git "$PROJECT_PATH"
-else:
-    os.chdir(PROJECT_PATH)
-    !git pull origin master
+# Configura ambiente
+os.chdir('/content/Progetto-Deep-Learning')
+sys.path.append('/content/Progetto-Deep-Learning/src')
 
-# 3. Configura l'ambiente
-os.chdir(PROJECT_PATH)
-import sys
-sys.path.append(f"{PROJECT_PATH}/src")
+# Installa dipendenze essenziali
+!pip install -q tensorflow-datasets seaborn plotly opencv-python
 
-# 4. Installa dipendenze usando il file specifico per Colab
-!pip install -q -r requirements-colab.txt
+print("✅ Setup completato! Inizia il training...")
 ```
+
+## 🚀 **Workflow Completo**
+
+### 1. **Training su Colab**
+- Apri `04-cnn-from-scratch.ipynb` su [Google Colab](https://colab.research.google.com/)
+- Aggiungi la cella di setup sopra
+- Esegui tutte le celle
+- **Al termine: DOWNLOAD AUTOMATICO** del modello (file ZIP)
+
+### 2. **Uso Locale**
+- Estrai il file ZIP scaricato in `models/` del progetto locale
+- Esegui `05-model-evaluation.ipynb` localmente
+- Il modello viene caricato automaticamente
+
+## ✨ **Vantaggi della Soluzione Semplificata**
+
+✅ **Niente Google Drive** - zero configurazione  
+✅ **Download diretto** - un click e hai tutto  
+✅ **Setup rapido** - 30 secondi invece di 5 minuti  
+✅ **Niente sincronizzazione** - tutto locale dopo il download  
+✅ **Compatibilità completa** - funziona sempre
 
 ## � File di Configurazione
 
