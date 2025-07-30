@@ -1,0 +1,10 @@
+{
+    "start_time": "2025-07-29T04:22:03.906813",
+    "end_time": "2025-07-29T09:36:43.626082",
+    "duration_seconds": 18879.719269,
+    "duration_minutes": 314.6619878166667,
+    "total_epochs": 19,
+    "best_val_accuracy": 0.245005264878273,
+    "best_val_loss": 2.667907953262329,
+    "total_parameters": 5267625,
+    "trainable_parameters": 

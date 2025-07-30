@@ -1,0 +1,165 @@
+Linee Guida Progettuali - Annualità 2025
+1 Introduzione 2
+2 Obiettivo formativo 2
+3 Set di dati e ambienti 2
+4 Percorso di realizzazione suggerito 3
+4.1 Predisporre ed inviare la proposta di progetto per la sua validazione 3
+4.2 Definire il piano sperimentale e condurre un'analisi esplorativa (opzionale) 3
+4.3 Progettare e implementare il vostro approccio 4
+4.4 Eseguire esperimenti per valutare e migliorare il vostro approccio 4
+4.5 Rendere il proprio approccio maturo e creativo 4
+4.6 Interpretare e discutere i risultati ottenuti 5
+4.7 Predisporre ed inviare i materiali da consegnare e poi presentare 5
+5 Modalità di valutazione 6
+6 Note aggiuntive 6
+Appendice A Set di dati e ambienti non utilizzabili 8
+Appendice B Esempi di descrizioni progettuali 9
+Appendice C Framework e tutorial a supporto 10
+1 Introduzione
+In questo corso, vi viene richiesto di completare un progetto in gruppi di massimo quattro studentesse e studenti volto a progettare e testare empiricamente un approccio di apprendimento automatico profondo su uno o più set di dati. In questo progetto, insieme al vostro gruppo dovrete scegliere almeno un set di dati e/o ambiente, identificare una o più domande di ricerca, definire un piano sperimentale, progettare e valutare un vostro approccio di apprendimento automatico profondo basato sulle domande di ricerca identificate, comparandolo con ragionevoli alternative esistenti (baseline), utilizzando i concetti insegnati in questo corso per fondare le decisioni di progettazione. Per il progetto, dovrete lavorare con il set di dati pubblici e, come indicato di seguito, vi verrà richiesto di applicare i metodi del corso per rispondere alle domande di ricerca. Nello specifico, dovrete implementare e sperimentare approcci di apprendimento automatico in Python, affidandovi ai pacchetti forniti per esso (esempio: NumPy, SciPy, Pandas, Matplotlib, Seaborn, ScikitLearn, TensorFlow, PyTorch ...), come anche presentato in laboratorio. Ci aspettiamo che, durante la realizzazione, vi atteniate alle norme ACM’s Code of Ethics and Professional Conduct.
+2 Obiettivo formativo
+L'obiettivo formativo riguarda imparare a applicare diversi concetti legati alla progettazione di approcci di apprendimento automatico profondo e fondare le proprie decisioni di progettazione su questi concetti. In particolare, attraverso il progetto, avrete l'opportunità di applicare i concetti descritti nelle lezioni e nelle sessioni di laboratorio a casi d'uso moderni e di prendere decisioni di progettazione basate su di essi. Al termine di questo progetto, dovreste essere in grado di:
+OBJ1. Definire le domande di ricerca per un particolare argomento o dominio.
+OBJ2. Scomporre le domande di ricerca in un piano sperimentale.
+OBJ3. Applicare concetti teorici per progettare un apprendimento automatico profondo.
+OBJ4. Sviluppare un approccio di apprendimento automatico profondo.
+OBJ5. Progettare protocolli di valutazione per gli approcci in linea con le domande di ricerca.
+OBJ6. Eseguire esperimenti per valutare un approccio di apprendimento automatico profondo.
+OBJ7. Discutere le implicazioni ed identificare i vantaggi e i limiti del vostro approccio.
+3 Set di dati e ambienti
+Per questo corso, potete usare solo dataset pubblici e gratuiti. Sono ammessi i dataset inclusi nel catalogo di Tensorflow e gli ambienti per reinforcement learning inclusi in Gymnasium OpenAI (sezione "Environments") compatibili con Tensorflow. Siete invitati ad esplorare ciò che tratterete nel vostro progetto all'interno di questi cataloghi. Se adeguatamente motivati, potete impiegare anche dataset o ambienti reperibili in altri repository, come i seguenti. Tuttavia, tenete conto che spesso dovrete pre-processarli. Nel caso di dataset molto grandi, dovrete impiegare un sottoinsieme dei dati in essi inclusi in modo da non appesantire il carico computazionale e giustificare il metodo che userete per filtrare tale sottoinsieme. Siete invitati ad esplorare, per esempio, i seguenti repository:
+● UCI or UC Irvine Machine Learning Datasets Repository
+● AWS Datasets
+● Google Dataset Search
+● Data.Gov
+● Microsoft Research Open Data
+● Kaggle
+● World Bank
+Durante il processo di selezione, si consideri si dovrà selezionare un solo dataset o ambiente. Inoltre, non sarà possibile utilizzare i set di dati e gli ambienti elencati nella sezione "Appendice A", in quanto già impiegati in precedenti annualità.
+4 Percorso di realizzazione suggerito
+Si consideri che le descrizioni che seguono devono essere considerate solo come indicazioni di supporto, per mantenere voi e il vostro progetto sulla strada giusta. Ricordate che dovrete descrivere, motivare e giustificare ogni scelta progettuale durante tutto il processo realizzativo.
+4.1 Predisporre ed inviare la proposta di progetto per la sua validazione
+Per prima cosa, vi viene chiesto di identificare il nome del gruppo, i colleghi o le colleghe con le quali realizzare il progetto, il set di dati (o l'ambiente nel caso di un progetto sul reinforcement learning) con cui lavorare durante il progetto e gli elementi di base necessari per la descrizione progettuale (è possibile visionare alcuni esempi in "Appendice B").. Eventuali dataset e ambienti diversi da quelli dei cataloghi di Tensorflow e Gymnasium OpenAI potranno essere considerati solo se adeguatamente motivati sia in termini di obiettivo che di fattibilità di elaborazione.
+Cosa si deve fare:
+● Compilare la propria proposta di progetto secondo il modello presente su Moodle.
+● Consegnare la proposta di progetto su Moodle tramite l'apposito form.
+● Attendere la conferma di validazione del progetto su Moodle (riceverete una notifica).
+4.2 Definire il piano sperimentale e condurre un'analisi esplorativa (opzionale)
+Per meglio informare i passi successivi, vi viene richiesto di selezionare il compito (task) e le domande di ricerca (almeno una, massimo tre) che guideranno il vostro progetto, in base al dataset o l'ambiente scelto. Poi, dovrete abbozzare un piano sperimentale che includa le attività necessarie per progettare e implementare il vostro approccio di apprendimento automatico profondo e una breve descrizione degli esperimenti che eseguirete per rispondere alle domande di ricerca (definendo anche le metriche di valutazione, i modelli con i quali compararvi e le modalità di comparazione). Per guidare le vostre decisioni, potete avvalervi di un'analisi esplorativa sul vostro set di dati o ambiente che, nel caso, dovrà essere inclusa e commentata in uno Jupiter Notebook.
+Cosa si deve fare:
+● Identificare un compito (task) da risolvere e un elenco con una o più domande di ricerca.
+● Definire un piano sperimentale del progetto (esempio: elenco, schema, GANTT).
+● Condurre un'analisi esplorativa sui dati all'interno di uno Jupiter Notebook (opzionale).
+4.3 Progettare e implementare il vostro approccio
+Progettare e implementare la vostra pipeline di apprendimento automatico profondo, in base alle domande di ricerca selezionate e alla vostra analisi esplorativa. Nell'ambito di questo processo, ad esempio, dovrete decidere l'approccio di apprendimento automatico profondo più adatto ai vostri obiettivi, il modo in cui i dati devono essere pre-elaborati prima di essere utilizzati nell'approccio di apprendimento automatico, quali dati saranno utilizzati come input per il vostro approccio in base al set di dati o ambiente e così via. In seguito, si dovrebbe implementare l'approccio completo e si dovrebbero eseguire delle prove preliminari per garantire che l'approccio sia ragionevolmente pronto per essere testato nelle settimane successive. Si consiglia di salvare i modelli addestrati in modo da poterne poi consentire il caricamento per le fasi successive. Si consiglia di visionare e considerare l'impiego di framework di supporto indicati in "Appendice C".
+Cosa si deve fare:
+● Progettare il vostro approccio di apprendimento automatico profondo.
+● Implementare il vostro approccio di apprendimento automatico profondo.
+4.4 Eseguire esperimenti per valutare e migliorare il vostro approccio
+È quindi possibile eseguire esperimenti più approfonditi sul set di dati o ambiente selezionato. Sulla base del piano sperimentale, è necessario implementare il protocollo di valutazione (ad esempio, il metodo di valutazione, le metriche da monitorare, le attività di addestramento e test da eseguire, gli approcci di base da usare per la comparazione) al vostro approccio di apprendimento automatico profondo. I diversi esperimenti devono essere eseguiti in modo da fornire risultati per rispondere alle domande di ricerca definite. Una volta eseguito un test, ad esempio, è necessario preparare tabelle e visualizzazioni che riassumono i risultati dell'esperimento (esempio: tabelle con una riga per ogni variante del modello e una colonna per ogni metrica di valutazione monitorata). Sulla base dei risultati, potrebbe essere necessario perfezionare l'approccio di apprendimento automatico profondo, in modo che le sue prestazioni migliorino durante l'esecuzione. La realizzazione può essere condotta mediante un insieme di script Python o attraverso uno Jupiter Notebook dedicato. Si consiglia di salvare i risultati della valutazione in file CSV o JSON in modo da poterne poi consentire il caricamento per la realizzazione di tabelle o grafici stilisticamente di qualità.
+Cosa si deve fare:
+● Eseguire esperimenti approfonditi al piano sperimentale definito precedentemente. .
+● Preparare tabelle e grafici che riassumono i risultati per rispondere alla domanda di ricerca.
+4.5 Rendere il proprio approccio maturo e creativo
+In questa parte, sulla base dei primi risultati, potrebbe essere necessario perfezionare l'approccio originario che avevate implementato. Questo processo consentirà di rafforzare l'approccio e di renderlo più maturo. Una volta perfezionato e messo a punto il vostro approccio, dovrete eseguire esperimenti approfonditi e aggiornare i risultati di conseguenza. Una volta che ritenete di aver messo a punto il vostro approccio, potreste aggiungere un elemento che faccia risaltare il vostro progetto. Per esempio, potreste confrontare il vostro approccio con delle baseline (una baseline è un modello spesso esistente che fornisce risultati ragionevoli, potete avere anche baseline basate su machine learning tradizionale, p.e. RandomForest). Altrimenti, potreste aggiungere un'estensione
+creativa al vostro approccio e/o lasciare che il vostro approccio originale sia uno dei punti di riferimento con cui confrontare le sue successive estensioni o analizzare trasparenza o equità algoritmica. Questi sono solo esempi di elementi che potrebbero far risaltare il vostro approccio.
+Cosa si deve fare:
+● Affinare e migliorare l'approccio originale di apprendimento automatico profondo.
+● Eseguire nuovamente gli esperimenti e aggiornare i risultati di conseguenza.
+● Inserire uno o più estensioni creative al progetto per distinguersi (opzionale).
+4.6 Interpretare e discutere i risultati ottenuti
+Una volta condotti gli esperimenti, dovrete analizzare attentamente i risultati per rispondere alle vostre domande di ricerca, discutere i principali risultati e identificare le loro implicazioni sul contesto di riferimento (esempio: dal punto di vista educativo, pedagogico ed etico). Come parte di questo processo, potrebbe essere necessario eseguire un'analisi statistica. Per ogni domanda di ricerca, dovrete organizzare i risultati in modo che possano supportare la vostra discussione e aiutarvi a rispondere alle domande. Alla fine della discussione, i risultati principali di quella domanda di ricerca devono essere riassunti con poche frasi. Deve essere chiaro il motivo per cui si è eseguita ogni analisi e a quale domanda di ricerca si risponde.
+Cosa si deve fare:
+● Riassumere i risultati in grafici e tabelle adatti a una presentazione basata su slide.
+● Redigere una discussione dei risultati, inquadrata in base alle domande della ricerca.
+● Identificare e discutere le implicazioni dei risultati ottenuti sugli utenti e sul contesto.
+4.7 Predisporre ed inviare i materiali da consegnare e poi presentare
+Secondo le scadenze definite per l'appello in cui si intende consegnare il progetto, il referente del gruppo consegnerà su Moodle il materiale del progetto stesso. Sarà aperto un form di consegna in prossimità di ogni appello. Si richiede di predisporre e inviare i seguenti materiali:
+1. Presentazione finale (pptx o altro formato modificabile) [OBBLIGATORIO].
+2. Codice sorgente e dati (file zip) [OBBLIGATORIO].
+3. Video teaser (file mp4) [OPZIONALE, PER EVENTUALE BONUS].
+Durante la predisposizione e consegna della presentazione finale, tenete conto che in essa potreste fornire una breve panoramica del problema che state cercando di risolvere e delle domande di ricerca a cui state cercando di rispondere. Poi, potreste presentare il set di dati con cui avete lavorato (esempio: qualche statistica sul set di dati) e le osservazioni principali (meglio se supportate da grafici e tabelle) emerse dalla vostra analisi esplorativa. Potreste fornire ulteriori informazioni sul vostro piano sperimentale e sulle componenti del vostro approccio di apprendimento automatico profondo, sui dettagli dei vostri risultati (tabelle e grafici), sulla vostra discussione/interpretazione e sulle implicazioni per il contesto di riferimento. Infine, potete chiudere con la menzione di alcuni sviluppi interessanti che si potrebbero condurre nel futuro.
+Durante l'esposizione della presentazione finale, che si terrà nella data ufficiale dell'appello d'esame secondo il calendario pubblicato dal docente, a ogni gruppo verranno assegnati 20 minuti, suddivisi in 10 minuti per l’esposizione e 10 minuti per le domande. Tutti i membri del gruppo
+devono essere presenti durante la fascia oraria assegnata ed è necessario che ciascuno di loro intervenga come relatore. Ogni componente potrà ricevere domande sul progetto, anche puntuali sul codice sorgente, motivo per cui è fondamentale che tutti conoscano in modo approfondito ogni parte del lavoro svolto. Il voto sarà assegnato individualmente e potrà differire tra i membri.
+Durante la predisposizione del codice sorgente, si tenga conto che esso deve essere commentato e suddiviso in uno o più script Python o Jupiter Notebook (anche su Colab), organizzati in maniera idonea. La consegna di codice non organizzato e non riproducibile comporta forti penalità. Inoltre, il codice deve essere accompagnato da commenti sulle operazioni svolte, ragionamenti fatti, scelte intraprese, risultati e osservazioni emerse. La mancanza di commenti sarà fortemente penalizzata.
+Durante la consegna del codice sorgente, se il dataset risulta troppo voluminoso per essere incluso nella consegna, si consiglia di caricarlo sul proprio spazio OneDrive accademico e di inserire nell’archivio consegnato su Moodle un file contenente il link per il download dei dati. Il materiale deve essere ben documentato e facilitare la riproduzione degli esperimenti del docente.
+Durante la predisposizione del video teaser opzionale, è importante tenere presente che la durata massima consentita è di 90 secondi. Il video dovrà essere pensato per un pubblico non tecnico, quindi l’obiettivo principale sarà comunicare l’essenza del progetto in modo semplice, coinvolgente e accessibile. Il tono dovrà essere chiaro e diretto, privilegiando spiegazioni intuitive, supportate da esempi concreti, anche facendo riuso del materiale predisposto per la presentazione finale. Un video teaser efficace può seguire questo flusso: iniziare con un’introduzione che presenti il problema in modo coinvolgente, descrivere poi in modo semplice e intuitivo l’idea centrale del progetto, evitando termini tecnici, fornire alcuni risultati principali e concentrarsi sull’impatto potenziale degli stessi, chiarendo chi ne beneficia e in quali contesti. La chiusura dovrebbe lasciare un’impressione duratura, con una frase ad effetto o uno slogan che sintetizzi il valore del progetto. Tecnicamente, si consiglia di usare un formato video orizzontale, con audio ben registrato (anche usando voci sintetiche). È preferibile evitare slide troppo dense di testo, privilegiando immagini, brevi animazioni, spezzoni dimostrativi o grafiche intuitive che accompagnino il racconto.
+Cosa si deve fare:
+● Predisporre i materiali da consegnare secondo quanto indicato nella sezione qui sopra.
+● Consegnare i materiali nell'apposito form relativo all'appello di esame su Moodle.
+5 Modalità di valutazione
+Il progetto conta per il 43% del voto finale del corso (15 punti su 33) e la sua valutazione sarà articolata tra presentazione finale (40%, quindi 6 punti) e codice sorgente (60%, quindi 9 punti).
+La valutazione della presentazione ha carattere individuale (i membri del gruppo potranno ricevere punteggi differenti). Ogni membro sarà valutato sulla base della chiarezza espositiva, della comprensione approfondita del progetto nel suo insieme, della capacità di rispondere a domande specifiche, e della capacità di inquadrare e comunicare il proprio contributo. La partecipazione attiva durante la fase di domande e risposte sarà anch’essa considerata ai fini della valutazione.
+La valutazione del codice sorgente ha carattere collettivo (la valutazione sarà uguale per tutti i membri). Costituiranno oggetto di valutazione la completezza dell’implementazione, la correttezza tecnica, la chiarezza e la leggibilità del codice, l’organizzazione complessiva (con riferimento alla struttura, alla modularità e alla documentazione), l’originalità delle soluzioni adottate, la riproducibilità dei risultati e l’efficienza risolutiva in relazione agli obiettivi dichiarati.
+A integrazione della valutazione principale, sarà possibile ottenere un punto bonus per il gruppo (in aggiunta ai 15 punti assegnabili per il progetto) attraverso la realizzazione di un video teaser opzionale. Il punto bonus sarà assegnato solo se il video rispetta criteri minimi di qualità, tra cui: chiarezza messaggio, coerenza con l’idea progettuale, adattamento del linguaggio a un pubblico non tecnico, buona qualità audio-visiva e rispetto del limite di 90 secondi. Nel caso in cui il video rispetti solo parzialmente ma in modo sufficiente questi criteri, potranno essere assegnati 0.5 punti.
+6 Note aggiuntive
+● Si possono utilizzare tutte le librerie/framework di Python utilizzate durante il corso ma siete liberi di usare anche delle altre. In quest’ultimo caso tale scelta dovrà essere giustificata opportunamente e il notebook dovrà contenere anche le istruzioni di installazione.
+● Tutto il codice Python presentato dal docente durante il corso può essere utilizzato per il progetto finale. Contrariamente, NON sono ammessi progetti che presentano una parte sostanziale (> 30%) di codice scritto da altri (altri studenti, siti web, etc.).
+● Nei casi in cui verranno consegnati progetti con porzioni di codice palesemente simili saranno presi severi provvedimenti. Si ricorda che ogni porzione di codice esterna deve riportare la fonte ed essere adeguatamente motivata.
+● La quantità di lavoro e lo sforzo profuso saranno commisurati al numero di membri del gruppo. Il docente si riserva di poter richiedere integrazioni se questo dovesse mancare.
+● I membri dei gruppi e il dataset principale non devono cambiare. Nel caso in cui sia necessario apportare modifiche, il referente del gruppo dovrà inviare un'e-mail al docente nella quale includere le modifiche prospettate; si deve attendere approvazione.
+● I set di dati selezionati possono essere completati con informazioni esterne, a condizione che si utilizzino altri set di dati pubblici e che i dati aggiuntivi siano rilevanti per le domande e i compiti della ricerca sui set di dati di riferimento. L'aggiunta deve essere ben motivata.
+● Le domande e i compiti di ricerca devono riguardare l'apprendimento automatico profondo e rientrare nelle macroaree previste dal programma del corso. In caso contrario, è chiesto di fornire giustificazioni in fase di proposta di progetto.
+● Il materiale prodotto nell’ambito del progetto potrà essere usato, previa anonimizzazione, per finalità di promozione,, documentazione di buone pratiche e attività di orientamento. Con la consegna del materiale, si intende concessa l’autorizzazione all’utilizzo a tali fini.
+Appendice A Set di dati e ambienti non utilizzabili
+Durante il processo di selezione, si consideri che non sarà possibile utilizzare i set di dati e gli ambienti elencati di seguito, in quanto già impiegati in precedenti annualità. Nello specifico, non potranno essere usati i seguenti set di dati:
+● AI indian license plate recognition (link)
+● Best artworks of all time (link)
+● Brain tumor RMI (link)
+● British literature NLP labeled phrase (link)
+● Car plate detection (link)
+● Cat VS Dog (link)
+● Cycle GAN maps (link)
+● Covid radiography (link)
+● Deep fake image detection (link)
+● Diabetic retinopathy (link)
+● Dog emotions (link)
+● Face mask detection (link)
+● Fermi GBM gamma-ray burst (link)
+● FLIC (link)
+● GAN-based training for binary classifier (link)
+● GTZAN (link)
+● Ham 100 segmentation and classification (link)
+● Hospital length of stay (link)
+● Human face emotions (link)
+● Individual household electric power consumption (link)
+● Landscape image colorization (link)
+● Layout LM (link)
+● LLM detect Ai generated text (link)
+● LSUN (link)
+● Lung disease (link)
+● KDDCup99 (link)
+● Malaria (link)
+● Moody challenge physionet (link)
+● MVTec AD dataset (link)
+● Parkinson disease (link)
+● Paws x wiki (link)
+● Plant village (link)
+● Speech commands (link)
+● Student depression dataset (link)
+● Text with sentiment (link)
+● VGGFace2 (link)
+● WCE curated colon disease (link)
+E, non potranno essere impiegati i seguenti ambienti di apprendimento per rinforzo:
+● Ant maze environments (link)
+● Highway environments (link)
+● Panda gym environments (link)
+Appendice B Esempi di descrizioni progettuali
+Esempio 1
+L'obiettivo è costruire un modello capace di generare autonomamente dei campioni, dato un dataset di caratteristiche di software benigni e maligni, le cui feature siano quanto più simili a quelle dei malware del set di addestramento. Ciò verrebbe ottenuto usando come tipo di modello le GAN, e quindi si potrebbe valutare in tempo reale quali siano le performance del generatore rispetto al discriminatore. Per distinguerci abbiamo pensato di implementare alcune metodologie nel campo della trasparenza algoritmica, che possano mostrare quali siano le caratteristiche che portano maggiormente il discriminatore a classificare un campione come software benigno o maligno. Una potenziale utilità nel mondo reale è quella di costruire, mediante la GAN, un dataset consistente di esempi di software utilizzabili per allenare un programma antivirus, che sarà in grado di migliorare le sue performance su casi reali.
+Esempio 2
+L'obiettivo del progetto è la creazione di un modello che sia in grado di classificare l'immagine di un rifiuto dato in input per riconoscere la tipologia di quest'ultimo. Verranno utilizzati dei livelli di classificazione delle immagini visti nel corso e altri implementati da zero; ipotizziamo di utilizzare livelli noti quali livelli dense, convolutivi, pooling, etc. Si utilizzeranno i seguenti metodi di valutazione: accuratezza, matrice di confusione e relativi, error rate, loss score e in generale tutte le metriche necessarie per valutare quale dei vari modelli da noi implementati lavori meglio con il dataset fornito. Pensavamo anche di curare l'aspetto della rappresentatività del dataset attraverso approcci di data augmentation (rescaling dell'immagine, occlusioni, cambi di prospettiva, etc.). Un'altra aggiunta opzionale che si potrebbe implementare (da valutare in base al tempo disponibile) è la creazione di un'applicazione iOS con all'interno il modello. L'applicazione di questo modello nella realtà, oltre ad essere molto attuale e di grande rilevanza, trova spazio in diversi contesti: in un'isola ecologica si potrebbe usare per il riconoscimento dei rifiuti e determinare se sia stata effettuata correttamente la raccolta differenziata e imporre eventuali sanzioni; smistamento dei rifiuti in degli ipotetici cestini smart pubblici (gettato un rifiuto verrà smistato nella categoria corretta); sistema di riconoscimento rifiuti per indicare quale sia il corretto smistamento.
+Esempio 3
+L'obiettivo del nostro progetto è quello di addestrare ed adoperare modelli di rete neurale convoluzionale per risolvere il task di riconoscimento di emozioni dalle espressioni facciali delle persone. L'approccio che intendiamo percorrere per raggiungere l'obiettivo, dapprima orientato sulla progettazione, addestramento e valutazione di almeno un'architettura 'from scratch' e una 'pre-trained + fine tuning', sposterà il focus sull'analisi della trasparenza algoritmica del modello, evidenziando quali aree dell'immagine hanno portato alla previsione effettuata dalla rete per alcuni esempi interessanti. Infine approfondiremo come l'applicazione del modello può impattare su
+alcuni settori come ad esempio quello della customer analysis, eventualmente facendo riferimento a potenziali effetti (positivi e/o negativi) causati dall'iniquità del modello nel riconoscimento di alcune specifiche emozioni in confronto ad altre.
+Appendice C Framework e tutorial a supporto
+● Git può essere utile per gestire il progetto e il versionamento del codice. Tutorial qui.
+● Per salvare dati, è utile collegare Google Colab a Google Drive. Tutorial qui.
+● Esistono diverse guide su come organizzare un progetto di deep learning. Tutorial qui.
+● Spacy può essere impiegato per il processamento del linguaggio naturale. Tutorial qui.
+● Onnx è utile per salvare i modelli pre-addestrati in un formato interoperabile. Tutorial qui.
+● Wandb è un'interessante estensione per il monitoraggio dell'addestramento. Tutorial qui.
+● Paperspace è un'alternativa a Google Colab per accedere a GPU gratuite. Tutorial qui.
+● Yaml è utile per creare file di configurazione da importare negli script. Tutorial qui.
+● Sphinx serve per documentare un progetto tramite creazione di un wiki. Tutorial qui.
+● Gradio è una estensione per creare una demo di un modello pre-addestrato. Tutorial qui.
