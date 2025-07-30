@@ -1,7 +1,75 @@
 Progetto Deep Learning
 ==============================
 
-Progetto di implementazione pratiche di Deep Learning
+Progetto di implementazione pratiche di Deep Learning con classificazione di erbacce usando CNN.
+
+## 🚀 Quick Start
+
+### 💻 Ambiente Locale
+```bash
+git clone <repository-url>
+cd Progetto-Deep-Learning
+python -m venv .venv
+.venv\Scripts\activate  # Windows
+pip install -r requirements.txt
+```
+
+### ☁️ Google Colab
+Per training su GPU gratuita, apri i notebook su [Google Colab](https://colab.research.google.com/) e aggiungi questa cella all'inizio:
+
+```python
+# Setup automatico Google Colab
+!wget -q https://raw.githubusercontent.com/Ame-76/Progetto-Deep-Learning/master/setup_colab.py
+exec(open('setup_colab.py').read())
+```
+
+📖 **Guida completa**: Consulta [COLAB_GUIDE.md](COLAB_GUIDE.md) per istruzioni dettagliate.
+
+### 3. Setup GPU (Opzionale ma Raccomandato)
+Per accelerazione GPU, segui la guida completa: [CUDA_SETUP.md](CUDA_SETUP.md)
+
+**Quick setup:**
+- Installa [CUDA Toolkit 11.8](https://developer.nvidia.com/cuda-11-8-0-download-archive)
+- Installa [cuDNN 8.6](https://developer.nvidia.com/cudnn) 
+- Verifica con: `python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"`
+
+### 4. Esegui i Notebook
+```bash
+jupyter notebook notebooks/
+```
+
+**Ordine consigliato:**
+1. `01-environment-setup.ipynb` - Verifica ambiente
+2. `02-dataset-exploration.ipynb` - Esplorazione dataset DeepWeeds
+3. `03-preprocessing.ipynb` - Preprocessing e preparazione dati
+4. `04-cnn-from-scratch.ipynb` - Training CNN da zero
+5. `05-model-evaluation.ipynb` - Valutazione modello
+
+## 📊 Dataset
+
+Utilizziamo il **DeepWeeds Dataset** per la classificazione di 9 specie di erbacce:
+- 17,509 immagini etichettate
+- Risoluzione 256x256 pixel
+- 8 specie di erbacce + 1 classe "negative"
+
+## 🎯 Obiettivi del Progetto
+
+- ✅ Implementare CNN da zero con TensorFlow/Keras
+- ✅ Tecniche di preprocessing avanzate
+- ✅ Data augmentation e bilanciamento classi
+- ✅ Monitoraggio training con callbacks
+- ✅ Valutazione metriche e visualizzazioni
+- ✅ Ottimizzazione performance GPU
+
+## 📈 Performance Attese
+
+**Con GPU (CUDA 11.8 + cuDNN 8.6):**
+- Training: ~30-60 minuti (30 epoch)
+- Accuratezza: >85% sul validation set
+
+**Con CPU:**
+- Training: ~2-4 ore (30 epoch)
+- Stesse performance, tempi più lunghi
 
 Project Organization
 ------------
